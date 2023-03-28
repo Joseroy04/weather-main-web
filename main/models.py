@@ -16,8 +16,6 @@ class driver(models.Model):
         return self.driver_name
 
 
-
-
 class bus(models.Model):
     bus_name = models.CharField(_("bus name"), max_length=50)
     bus_no = models.CharField(_("bus no"), max_length=50 ,unique=True)
@@ -31,7 +29,8 @@ class bus(models.Model):
 class bus_stop(models.Model):
     city_name = models.CharField(_("city name"), max_length=50)
     pincode = models.IntegerField(_("pincode"))
-    
+    latitude = models.FloatField(_("latitude"))
+    longitude = models.FloatField(_("longitude"))
 
     class Meta:
         verbose_name = _("bus_stop")
@@ -49,9 +48,8 @@ class rutes(models.Model):
 
     class Meta:
         verbose_name = _("rutes")
-        verbose_name_plural = _("rutess")
+        verbose_name_plural = _("rutes")
         
     def __str__(self):
         return self.rute_name
-
 

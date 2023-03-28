@@ -1,4 +1,7 @@
 from django.contrib import admin
+admin.site.site_header = "Admin page (weather Portal)"
+admin.site.site_title = "Weather Admin Portal"
+admin.site.index_title = "Welcome to weather Portal"
 
 # Register your models here.
 from .models import bus,bus_stop,driver,rutes
